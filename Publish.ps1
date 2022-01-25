@@ -3,6 +3,7 @@ $packName = "<packName>"
 $project = "<project>"
 $buildType = "<Publish>"
 $releaseDir = "c:\Releases\"
+$FileName = "<file name>.exe"
 
 $scriptpath = $MyInvocation.MyCommand.Path
 $dir = Split-Path $scriptpath
@@ -10,7 +11,7 @@ Write-host "My start directory is $dir"
 Set-Location $dir
 
 # Get full Path of exe
-$exePath = resolve-path ".\$($project)\bin\$($buildType)\<file name>.exe"
+$exePath = resolve-path ".\$($project)\bin\$($buildType)\$($FileName)"
 # Get Exe version
 $verison = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($exePath).FileVersion
 
