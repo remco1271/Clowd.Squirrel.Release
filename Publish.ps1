@@ -39,7 +39,7 @@ if([System.IO.File]::Exists($path)) {
 
 Squirrel pack `
     --framework net6 `
-    --packName "$($packName)" `
+    --packId "$($packName)" `
     --packVersion "$($verison)" `
     --packAuthors "<Replace with your name>" `
     --packDirectory ".\$($project)\bin\$($buildType)" `
